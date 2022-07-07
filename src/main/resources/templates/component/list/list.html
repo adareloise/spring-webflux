@@ -1,0 +1,39 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head th:replace ="layout/index :: head">
+	</head >
+	<body>
+	<div th:fragment="products" class="py-4 m-4">
+		
+		<div class="card bg-light">
+
+			<div class="card-header" th:text="${title}"></div>
+
+			<!-- status -->
+			<div class="card-body">
+	
+				<div class="card-title">
+					<p><a th:href="@{/product/create}" class="btn btn-success btn-xs">Crear</a></p>
+				</div>
+
+				<table id="products" class="display">
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Name</th>
+							<th>Price</th>
+							<th>Date</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="product: ${products}">
+							<td th:text="${product.id}"></td>
+							<td th:text="${product.name}"></td>
+							<td th:text="${product.price}"></td>
+							<td th:text="${product.createAt}"></td>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>

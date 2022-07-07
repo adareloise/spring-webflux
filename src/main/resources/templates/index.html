@@ -1,0 +1,23 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head th:replace ="/component/layout/index :: head">
+	</head >
+	<body>
+		<!-- Menu -->
+		<header th:replace ="/component/layout/index :: nav"></header>
+		
+		<!-- Present -->
+		<div th:replace ="/component/list/list :: products"></div>
+
+		<!-- Footer -->
+		<footer th:replace ="/component/layout/index :: footer"></footer>
+		
+		<div th:replace ="/component/layout/index :: scripts"></div>
+		
+	</body>
+	
+	<script>
+	$(document).ready( function () {
+		   $('#products').DataTable();
+		});
+	</script>
+</html>

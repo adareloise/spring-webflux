@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layout/index :: head"></head>
+
+
+<body>
+	<header th:replace="layout/index :: header"></header>
+	<br><br><br>
+
+	<div class="container py-4">
+		<h3>Ha ocurrido un error Oops!</h3>
+		<div th:text="${error}"></div>
+		<div th:text="${message}"></div>
+		<div th:text="${status}"></div>
+		<div th:text="${timestamp}"></div>
+		<hr>
+	</div>
+	
+	<footer th:replace="layout/index :: footer"></footer>
+
+	<div th:replace="layout/index :: scripts"></div>
+</body>
+
+</html>
