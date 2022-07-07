@@ -33,4 +33,6 @@ build/
 .vscode/
 
 #in our .gitignore file 
-.properties
+!**/src/main/resource/.properties
+
+
